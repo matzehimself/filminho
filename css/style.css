@@ -1,0 +1,129 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+html{
+    background-image: url('src/Download.jfif');
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+}
+
+.heading{
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.425);
+    font-size: 30px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+}
+
+.container .main-video{
+    background: rgba(196, 0, 0, 0.4);
+    border-radius: 2.5px;
+    padding: 6px;
+}
+
+.container .main-video video{
+    width: 100%;
+    border-radius: 2.5px;
+}
+
+.container .main-video .title{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 23px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container .video-list{
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 2.5px;
+    height: 650px;
+    overflow-y: scroll;
+}
+
+.container .video-list::-webkit-scrollbar{
+    width: 11px;
+}
+
+.container .video-list::-webkit-scrollbar-track{
+    background: rgba(196, 0, 0, 0.4);
+    border-radius: 0px;
+}
+
+.container .video-list::-webkit-scrollbar-thumb{
+    background: rgba(196, 0, 0, 0.7);
+    border-radius: 70px;
+}
+
+.container .video-list .vid video{
+    width: 100px;
+    border-radius: 2.5px;
+}
+
+.container .video-list .vid{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2.5px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.heading1{
+    color: rgba(196, 0, 0, 0.7);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.container .video-list .vid:hover{
+    background: rgba(255, 0, 0, 0.4);
+}
+
+.container .video-list .vid.active{
+    background: rgba(196, 0, 0, 0.7);
+}
+
+.container .video-list .vid.active .title{
+    color: #fff;
+}
+
+.container .video-list .vid .title{
+    color: #333;
+    font-size: 17px;
+}
+
+@media (max-width:991px){
+     
+    .container{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+    }
+}
+
+@media (max-width:768px){
+     
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
